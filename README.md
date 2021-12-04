@@ -35,7 +35,7 @@ docker push --all-tags $CONTAINER_REGISTRY_USERNAME/${PWD##*/}
 docker run --detach \
        --restart always \
        --volume $PATH_TO_CONFIG:/config \
-       fei1yang/wgsocks:latest wgsocks -a $LOCAL_ADDR -b $SOCKS5_BIND_ADDR
+       ghcr.io/fei1yang/wgsocks:latest wgsocks -a $LOCAL_ADDR -b $SOCKS5_BIND_ADDR
 ```
 The code used in SagerNet for configuration file generation is [here](https://github.com/SagerNet/SagerNet/blob/22489c20d7b2d4db7960d0044303597488fac6f1/app/src/main/java/io/nekohasekai/sagernet/fmt/wireguard/WireGuardFmt.kt#L27-L41).
 
